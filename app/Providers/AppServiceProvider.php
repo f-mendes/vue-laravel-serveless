@@ -3,11 +3,11 @@
 namespace App\Providers;
 
 use App\Models\Permission;
+use Illuminate\Contracts\Database\Query\Builder;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\QueryException;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Contracts\Database\Query\Builder;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
                 });
             }
         } catch (QueryException $e) {
- 
+
         }
 
     }
